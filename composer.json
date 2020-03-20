@@ -1,0 +1,23 @@
+{
+    "name": "xiv/language",
+    "description": "Xiv-Tinkphp",
+    "authors": [
+        {
+            "name": "Dumplings",
+            "email": "i@xiv.cm"
+        }
+    ],
+    "require": {},
+    "keywords": [   
+      "Xiv",
+      "Thinkphp"
+    ],
+    "type": "library", 
+    "minimum-stability": "dev",
+    "license": "MIT", 
+    "autoload": {
+      "psr-4": {
+        "Xiv\\": "src/"
+      }
+    }
+}
