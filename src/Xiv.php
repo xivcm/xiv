@@ -15,8 +15,8 @@ class xiv
      * 中文简繁体切换
      * J为简体中文 F为繁体中文
      * $input 需要转换的文本
-     * $change_language_code 转换语言代码
-     * $current_language_code 当前语言代码
+     * $change 转换语言代码
+     * $current 当前语言代码
      * */
     public static function zh($input,$change = 'F',$current = 'J') {
         if ($change == $current) {//转换语言与当前语言相同
@@ -34,9 +34,9 @@ class xiv
 
     /* *
      * 中文简繁体自动切换
-     * zh-hans为简体中文 zh-hant为繁体中文
+     * J为简体中文 F为繁体中文
      * $input 需要转换的文本
-     * $current_language_code 当前语言代码
+     * $current 当前语言代码
      * */
     public static function zh_auto($input,$current = 'J') {
         if ($current == 'F') {//转换简体、当前繁体
