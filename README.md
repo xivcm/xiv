@@ -1,16 +1,19 @@
 # xiv
-Thinkphp6.0中文繁简体切换
+#Thinkphp6.0中文繁简体切换
 
-composer require xiv/language
+#composer require xiv/language
 
-use Xiv\xiv;
-vendor/topthink/src/think/Response.php
-/*
-*getContent方法返回值之前添加
-*$xiv=new xiv();
-*$this->content=$xiv->zh_auto($this->content,'J');
-*/
-  public function getContent(): string
+#use Xiv\xiv;
+#vendor/topthink/src/think/Response.php
+#/*
+#*getContent方法返回值之前添加
+#*$xiv=new xiv();
+#*$this->content=$xiv->zh_auto($this->content,'J');
+#*/
+#J表示当前语言为简体中文 F表示当前语言为繁体中文  
+#Thinkphp6.0所有程序返回结果皆会被转换，
+#但是不包含半路打印的print_r echo exit输出等等。
+#  public function getContent(): string
     {
         if (null == $this->content) {
             $content = $this->output($this->data);
@@ -46,6 +49,4 @@ vendor/topthink/src/think/Response.php
         $this->content=$xiv->zh_auto($this->content,'J');
         return $this->content;
     }
-J表示当前语言为简体中文 F表示当前语言为繁体中文  
-Thinkphp6.0所有程序返回结果皆会被转换，
-但是不包含半路打印的print_r echo exit输出等等。
+
