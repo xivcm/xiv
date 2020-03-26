@@ -35,7 +35,7 @@ class xiv
             $to=\think\facade\Session::get('Translate_to');
         }
         $headers=array('User-Agent: '.self::getUa());
-        $sign=md5($this->ak.$from.$input.$to.$this->sk);
+        $sign=md5($this->ak.$from.base64_encode($input).$to.$this->sk);
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, 'https://xiv.cm/translate.html');
         curl_setopt($curl, CURLOPT_HTTP_VERSION, '1.0');
